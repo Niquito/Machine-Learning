@@ -31,12 +31,9 @@ data = [juntarEstadisticas(data_es), juntarEstadisticas(data_en), juntarEstadist
 df = pandas.DataFrame(data, columns = ["Liga", "Cantidad de Fechas", "GL", "GV", "T. Goles", "T. Partidos", "EGF", "EGP"])
 
 print(df)
-#df = pandas.DataFrame(data,columns=['GL','GV'])
-#matplotlib.pyplot.bar(df['GL'], df['GV'])
-df.plot(x ='Liga', y='GL', kind = 'bar')
-matplotlib.pyplot.show()
-#df.plot(x='GL', y='GV', style='o')
-#matplotlib.scatter (df["goles_locales"], df["goles_visitantes"], color="black")
-#df[('goles_locales', 'goles_visitantes')].plot(kind="bar")
 
-#df.plot(x ='GL', y='GV', kind = 'scatter')	
+df.plot(x ='Liga', y='GL', kind = 'barh')
+matplotlib.pyplot.title("Total de goles locales")
+matplotlib.pyplot.xlabel("Liga")
+matplotlib.pyplot.ylabel("Goles")
+matplotlib.pyplot.show()
