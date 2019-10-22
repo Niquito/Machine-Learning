@@ -4,7 +4,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 dolar_data = pd.read_csv('CotizacionDolar.csv')
 
-dolar_data.sort_values(by='Fecha')
+#dolar_data = dolar_data.sort_values(by='Fecha', ascending=True)
 #by='col1', ascending=False
 y = dolar_data.Vendedor
 X = dolar_data.Fecha
